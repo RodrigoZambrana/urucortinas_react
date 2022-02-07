@@ -1,0 +1,26 @@
+[
+  {
+    "id_producto": 1,
+    "unidad": "M2-ROLLER",
+    "Moneda": "USD",
+    "precio": 60
+  },
+  {
+    "id_producto": 2,
+    "unidad": "M2-VENECIANA",
+    "Moneda": "USD",
+    "precio": 45
+  },
+  {
+    "id_producto": 3,
+    "unidad": "M2-BANDAS",
+    "Moneda": "USD",
+    "precio": 53
+  },
+  {
+    "id_producto": 4,
+    "unidad": "M2-CATALANAPVC",
+    "Moneda": "USD",
+    "precio": 60
+  }
+]
