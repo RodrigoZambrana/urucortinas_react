@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "./Carousel";
+import Budget from "./Budget";
 
 export default function Body() {
   return (
@@ -430,109 +431,9 @@ export default function Body() {
           </div>
         </div>
       </div>
-      {/* Testimonial End 
-Location Start  */}
-      <div class="location">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="section-header text-left">
-                <p>Contáctanos</p>
-                <h2>Car Washing Care Points</h2>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="location-item">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <div class="location-text">
-                      <h3>Car Washing Point</h3>
-                      <p>123 Street, New York, USA</p>
-                      <p>
-                        <strong>Call:</strong>
-                        +012 345 6789
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="location-item">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <div class="location-text">
-                      <h3>Car Washing Point</h3>
-                      <p>123 Street, New York, USA</p>
-                      <p>
-                        <strong>Call:</strong>
-                        +012 345 6789
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="location-item">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <div class="location-text">
-                      <h3>Car Washing Point</h3>
-                      <p>123 Street, New York, USA</p>
-                      <p>
-                        <strong>Call:</strong>
-                        +012 345 6789
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="location-item">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <div class="location-text">
-                      <h3>Car Washing Point</h3>
-                      <p>123 Street, New York, USA</p>
-                      <p>
-                        <strong>Call:</strong>
-                        +012 345 6789
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="location-form">
-                <h3>Request for a car wash</h3>
-                <form>
-                  <div class="control-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Name"
-                      required="required"
-                    />
-                  </div>
-                  <div class="control-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Email"
-                      required="required"
-                    />
-                  </div>
-                  <div class="control-group">
-                    <textarea
-                      class="form-control"
-                      placeholder="Description"
-                      required="required"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <button class="btn btn-custom" type="submit">
-                      Send Request
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Testimonial End */}
+      <Budget />
+
       {/* <!-- JavaScript Libraries --> */}
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
