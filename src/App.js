@@ -1,16 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Button } from "react-bootstrap";
+import React from "react";
+import Header from "./components/page/Header";
 
 function App() {
-  const notify = () => toast("Wow so easy!");
-
   return (
     <div className="App">
-      <Button onClick={notify}>Toast</Button>
-      <ToastContainer />
+      <Header />
     </div>
   );
 }
