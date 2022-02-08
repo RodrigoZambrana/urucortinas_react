@@ -2,22 +2,48 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
 export default function BudgetForm(props) {
+  const { sendBudget } = props;
+  const [formValue, setFormValue] = useState({
+    ancho: "",
+    alto: "",
+  });
+
+  const onChange = (event) => {
+    setFormValue({
+      ...formValue,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <>
       {/* <!-- Location Start --> */}
 
-      <div class="col-lg-6">
-        <div class="location-form">
+      <div className="col-lg-6">
+        <div className="location-form">
           <h3>Cálculo de presupuesto</h3>
-          <Form>
+          <Form
+            onSubmit={(event) => sendBudget(event, formValue)}
+            onChange={onChange}
+          >
             <div className="control-group">
-              <input type="number" placeholder="Ancho" />
+              <input
+                name="ancho"
+                type="number"
+                placeholder="Ancho"
+                className="form-control"
+              />
             </div>
             <div className="control-group">
-              <input type="number" placeholder="Alto" />
+              <input
+                type="number"
+                name="alto"
+                placeholder="Alto"
+                className="form-control"
+              />
             </div>
             <div>
-              <Button class="btn btn-custom" type="submit">
+              <Button className="btn btn-custom" type="submit">
                 Calcular
               </Button>
             </div>

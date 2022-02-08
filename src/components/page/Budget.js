@@ -1,15 +1,22 @@
-import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import BudgetForm from "./BudgetForm";
 
-export default function Budget() {
+export default function Budget(props) {
+  //
+  //
+
+  const sendBudget = (event, formValue) => {
+    event.preventDefault();
+    console.log("presupuesto enviado...");
+    console.log(formValue);
+  };
+
   return (
     <>
       {/* <!-- Location Start --> */}
       <div class="location">
         <div class="container">
           <div class="row">
-            <BudgetForm />
+            <BudgetForm sendBudget={sendBudget} />
             <div class="col-lg-6">
               <div class="section-header text-left">
                 <p>Calculá tu presupuesto</p>
