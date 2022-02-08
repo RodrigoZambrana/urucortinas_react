@@ -19,18 +19,18 @@ export default function Budget(props) {
   return (
     <>
       {/* <!-- Location Start --> */}
-      <div class="location">
-        <div class="container">
-          <div class="row">
+      <div className="location">
+        <div className="container">
+          <div className="row">
             <BudgetForm sendBudget={sendBudget} />
-            <div class="col-lg-6">
-              <div class="section-header text-left">
+            <div className="col-lg-6">
+              <div className="section-header text-left">
                 <p>Calculá tu presupuesto</p>
                 <h2>Información general</h2>
               </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="location-item">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="location-item">
                     <p>
                       El costo informado debe ser confirmado por alguna de las
                       vias de contacto detalladas en la seccion "contacto". Los
