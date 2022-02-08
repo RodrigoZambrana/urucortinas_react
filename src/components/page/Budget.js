@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import BudgetForm from "./BudgetForm";
+
 export default function Budget() {
   return (
     <>
@@ -6,34 +9,7 @@ export default function Budget() {
       <div class="location">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="location-form">
-                <h3>Cálculo de presupuesto</h3>
-                <form>
-                  <div class="control-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Ancho"
-                      required="required"
-                    />
-                  </div>
-                  <div class="control-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Alto"
-                      required="required"
-                    />
-                  </div>
-                  <div>
-                    <button class="btn btn-custom" type="submit">
-                      Calcular
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <BudgetForm />
             <div class="col-lg-6">
               <div class="section-header text-left">
                 <p>Calculá tu presupuesto</p>

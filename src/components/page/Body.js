@@ -6,7 +6,6 @@ export default function Body() {
   return (
     <>
       {/* <!-- Carousel Start --> */}
-
       {/* <!-- CSS Libraries --> */}
       <link
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -22,7 +21,6 @@ export default function Body() {
         href="lib/owlcarousel/assets/owl.carousel.min.css"
         rel="stylesheet"
       />
-
       {/* <!-- Template Stylesheet --> */}
       <link href="css/style.css" rel="stylesheet" />
       <Carousel />
@@ -432,8 +430,7 @@ export default function Body() {
         </div>
       </div>
       {/* Testimonial End */}
-      <Budget />
-
+      <Budget /> {/* Calcular presupuesto */}
       {/* <!-- JavaScript Libraries --> */}
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -441,11 +438,9 @@ export default function Body() {
       <script src="lib/owlcarousel/owl.carousel.min.js"></script>
       <script src="lib/waypoints/waypoints.min.js"></script>
       <script src="lib/counterup/counterup.min.js"></script>
-
       {/* <!-- Contact Javascript File --> */}
       <script src="mail/jqBootstrapValidation.min.js"></script>
       <script src="mail/contact.js"></script>
-
       {/* <!-- Template Javascript --> */}
       <script src="js/main.js"></script>
     </>

@@ -5,3 +5,8 @@ export interface CostoProducto {
   Moneda: string;
   precio: number;
 }
+
+export interface Medidas {
+  ancho: number;
+  alto: number;
+}
