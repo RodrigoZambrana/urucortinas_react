@@ -11,7 +11,8 @@ export default function Budget(props) {
     if (ancho == "" || alto == "") {
       toast("Debe completar todos los campos!");
     } else {
-      toast("Presupuesto calculado con éxito!");
+      const resultado = ancho * alto * 60 + 20;
+      toast("Presupuesto calculado con éxito!: " + resultado);
     }
   };
 
