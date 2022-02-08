@@ -9,14 +9,14 @@ export default function ControlledCarousel() {
   };
 
   return (
-    <div class="carousel">
-      <div class="container-fluid">
-        <div class="owl-carousel">
-          <div class="carousel-item">
-            <div class="carousel-img">
+    <div className="carousel">
+      <div className="container-fluid">
+        <div className="owl-carousel">
+          <div className="carousel-item">
+            <div className="carousel-img">
               <img src="img/carousel/roller.png" alt="roller" />
             </div>
-            <div class="carousel-text">
+            <div className="carousel-text">
               <h3>Cortinas Roller</h3>
               <h1>Protegé tus espacios de los rayos del sol</h1>
               <p>
@@ -24,16 +24,16 @@ export default function ControlledCarousel() {
                 y texturas a elección. Opciones tela blackout o screen con
                 filtro UV.
               </p>
-              <a class="btn btn-custom" href="rollers.html">
+              <a className="btn btn-custom" href="rollers.html">
                 Saber más!
               </a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-img">
+          <div className="carousel-item">
+            <div className="carousel-img">
               <img src="img/carousel/catalana.png" alt="catalana" />
             </div>
-            <div class="carousel-text">
+            <div className="carousel-text">
               <h3>Cortinas de Enrollar</h3>
               <h1>En aluminio y PVC</h1>
               <p>
@@ -42,16 +42,16 @@ export default function ControlledCarousel() {
                 para la aislación térmica y de sonido. Conocé mas sobre este
                 producto!
               </p>
-              <a class="btn btn-custom" href="cortinas-enrollar.html">
+              <a className="btn btn-custom" href="cortinas-enrollar.html">
                 Más Información
               </a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-img">
+          <div className="carousel-item">
+            <div className="carousel-img">
               <img src="img/carousel/bandas-verticales.png" alt="Image" />
             </div>
-            <div class="carousel-text">
+            <div className="carousel-text">
               <h3>Bandas verticales</h3>
               <h1>Varidad de colores y texturas</h1>
               <p>
@@ -59,23 +59,23 @@ export default function ControlledCarousel() {
                 espacios vidriados. Gran variedad de colores t texturas. Conocé
                 mas haciendo click en el botón!
               </p>
-              <a class="btn btn-custom" href="">
+              <a className="btn btn-custom" href="">
                 Saber más
               </a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-img">
+          <div className="carousel-item">
+            <div className="carousel-img">
               <img src="img/carousel/mosquiteros.png" alt="Image" />
             </div>
-            <div class="carousel-text">
+            <div className="carousel-text">
               <h3>Mosquiteros Enrollables</h3>
               <h1>Instalable en todo tipo de ventanas</h1>
               <p>
                 Protegé tus espacios de mosquitos e instectos. De fácil
                 instalación y gran durablidad.
               </p>
-              <a class="btn btn-custom" href="">
+              <a className="btn btn-custom" href="">
                 Más información
               </a>
             </div>

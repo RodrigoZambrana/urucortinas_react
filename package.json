@@ -1,6 +1,6 @@
 {
   "name": "www.urucortinas.com.uy",
-  "homepage": "https://www.urucortinas.com.uy/admin-web",
+  "homepage": "https://admin-web.urucortinas.com.uy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
