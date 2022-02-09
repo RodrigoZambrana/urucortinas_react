@@ -1,4 +1,6 @@
-import BudgetForm from "./BudgetForm";
+// import BudgetForm from "./BudgetForm";
+import PricesForm from "./PricesForm";
+
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,7 +24,9 @@ export default function Budget(props) {
       <div className="location">
         <div className="container">
           <div className="row">
-            <BudgetForm sendBudget={sendBudget} />
+            {/* <PricesForm sendBudget={sendBudget} /> */}
+            <PricesForm />
+
             <div className="col-lg-6">
               <div className="section-header text-left">
                 <p>Calculá tu presupuesto</p>

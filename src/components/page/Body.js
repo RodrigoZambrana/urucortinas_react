@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "./Carousel";
+// import Budget from "./Budget";
 import Budget from "./Budget";
+
 import { Helmet } from "react-helmet";
 
 export default function Body() {
@@ -441,7 +443,9 @@ export default function Body() {
         </div>
       </div>
       {/* Testimonial End */}
-      <Budget /> {/* Calcular presupuesto */}
+      {/* <Budget /> */}
+      <Budget />
+      {/* Calcular presupuesto */}
       {/* <!-- JavaScript Libraries --> */}
       <Helmet>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
