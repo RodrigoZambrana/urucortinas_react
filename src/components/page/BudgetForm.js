@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function BudgetForm(props) {
   const { sendBudget } = props;
@@ -7,6 +8,18 @@ export default function BudgetForm(props) {
     ancho: "",
     alto: "",
   });
+
+  const calcularPresupuesto = (event, formValue) => {
+    event.preventDefault();
+    const { ancho, alto } = formValue;
+
+    if (ancho == "" || alto == "") {
+      toast("Debe completar todos los campos!");
+    } else {
+      const resultado = ancho * alto * 60 + 20;
+      toast("Presupuesto calculado con éxito!: " + resultado);
+    }
+  };
 
   const onChange = (event) => {
     setFormValue({
@@ -23,7 +36,7 @@ export default function BudgetForm(props) {
         <div className="location-form">
           <h3>Cálculo de presupuesto</h3>
           <Form
-            onSubmit={(event) => sendBudget(event, formValue)}
+            onSubmit={(event) => calcularPresupuesto(event, formValue)}
             onChange={onChange}
           >
             <div className="control-group">

@@ -1,4 +1,4 @@
-// import BudgetForm from "./BudgetForm";
+import BudgetForm from "./BudgetForm";
 import PricesForm from "./PricesForm";
 
 import React, { useState } from "react";
@@ -6,17 +6,17 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Budget(props) {
-  const sendBudget = (event, formValue) => {
-    event.preventDefault();
-    const { ancho, alto } = formValue;
+  // const sendBudget = (event, formValue) => {
+  //   event.preventDefault();
+  //   const { ancho, alto } = formValue;
 
-    if (ancho == "" || alto == "") {
-      toast("Debe completar todos los campos!");
-    } else {
-      const resultado = ancho * alto * 60 + 20;
-      toast("Presupuesto calculado con éxito!: " + resultado);
-    }
-  };
+  //   if (ancho == "" || alto == "") {
+  //     toast("Debe completar todos los campos!");
+  //   } else {
+  //     const resultado = ancho * alto * 60 + 20;
+  //     toast("Presupuesto calculado con éxito!: " + resultado);
+  //   }
+  // };
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Budget(props) {
         <div className="container">
           <div className="row">
             {/* <PricesForm sendBudget={sendBudget} /> */}
-            <PricesForm />
+            <BudgetForm />
 
             <div className="col-lg-6">
               <div className="section-header text-left">
@@ -49,7 +49,6 @@ export default function Budget(props) {
           </div>
         </div>
       </div>
-      <ToastContainer />
       {/* <!-- Location End --> */}
     </>
   );

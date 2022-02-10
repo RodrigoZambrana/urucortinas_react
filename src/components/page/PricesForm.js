@@ -6,13 +6,12 @@ import axios from "axios";
 
 export default function PricesForm(props) {
   // const { sendBudget } = props;
-  const baseUrl = "http://localhost:8888/apiFrameworks/";
+  // const baseUrl = "http://localhost:8888/apiFrameworks/";
 
   const [formValue, setFormValue] = useState({
-    id: 0,
     nombre_producto: "",
-    unidad: "",
-    precio: 0,
+    ancho: "",
+    alto: "",
   });
 
   const onChange = (event) => {
@@ -22,70 +21,16 @@ export default function PricesForm(props) {
     });
   };
 
-  const addPrice = (event, formValue) => {
+  const calculoPresupuesto = (event, formValue) => {
     event.preventDefault();
-    const { id, nombre_producto, unidad, precio } = formValue;
-
-    if (id == "" || nombre_producto == "" || unidad == "" || precio == "") {
+    const { nombre_producto, ancho, alto } = formValue;
+    if (nombre_producto == "" || alto == "" || ancho == "") {
       toast("Debe completar todos los campos!");
     } else {
-      peticionPost();
-
-      toast(
-        "Aca consulto a la base de datos con valores: " +
-          id +
-          "_" +
-          nombre_producto +
-          "_" +
-          unidad +
-          "_" +
-          precio
-      );
+      const presupuesto = ancho * alto * 80;
+      toast("El costo es de:" + presupuesto);
     }
   };
-
-  const peticionPost = async () => {
-    var f = new FormData();
-    f.append("id", formValue.id);
-    f.append("nombre_producto", formValue.nombre_producto);
-    f.append("unidad", formValue.unidad);
-    f.append("precio", formValue.precio);
-    f.append("METHOD", "POST");
-    await axios
-      .post(baseUrl, f)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  // const peticionGet = async () => {
-  //   await axios
-  //     .get(baseUrl)
-  //     .then((response) => {
-  //       setData(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-
-  const peticionGet = async () => {
-    await axios
-      .get(baseUrl)
-      .then((response) => {
-        toast("El resultado es: " + response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  useEffect(() => {
-    peticionGet();
-  }, []);
 
   return (
     <>
@@ -93,20 +38,13 @@ export default function PricesForm(props) {
 
       <div className="col-lg-6">
         <div className="location-form">
+          <ToastContainer />
+
           <h3>Cálculo de presupuesto</h3>
           <Form
-            // onSubmit={(event) => sendBudget(event, formValue)}
-            onSubmit={(event) => peticionGet(event)}
+            onSubmit={(event) => calculoPresupuesto(event)}
             onChange={onChange}
           >
-            <div className="control-group">
-              <input
-                name="id"
-                type="number"
-                placeholder="id"
-                className="form-control"
-              />
-            </div>
             <div className="control-group">
               <input
                 type="text"
@@ -118,16 +56,16 @@ export default function PricesForm(props) {
             <div className="control-group">
               <input
                 type="text"
-                name="unidad"
-                placeholder="unidad"
+                name="ancho"
+                placeholder="ancho"
                 className="form-control"
               />
             </div>
             <div className="control-group">
               <input
-                type="number"
-                name="precio"
-                placeholder="precio"
+                type="text"
+                name="alto"
+                placeholder="alto"
                 className="form-control"
               />
             </div>
