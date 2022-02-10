@@ -34,6 +34,7 @@ export default function Body() {
       {/* <Carousel /> */}
       {/* <OfferedProducts /> */}
       <Budget />
+      {/* contenedor del form de presupuesto */}
       <VerVideojuegos />
       {/* Testimonial End */}
       {/* Calcular presupuesto */}

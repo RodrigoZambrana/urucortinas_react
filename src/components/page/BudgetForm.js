@@ -1,50 +1,51 @@
-import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
-import { RUTA_API } from "./Constantes";
-import { opcionesSelectPresupuesto } from "./Constantes";
-import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import React, { useState, useEffect } from 'react'
+import { Form, Button } from 'react-bootstrap'
+import { ToastContainer, toast } from 'react-toastify'
+import { RUTA_API } from './Constantes'
+import { opcionesSelectPresupuesto } from './Constantes'
+import { STORAGE_PRODUCTS_CART } from './Constantes'
 
-import Product from "./Product";
+import Product from './Product'
 
 export default function BudgetForm(props) {
-  const [productsCart, setProductsCart] = useState([]);
-  const [select, setSelect] = useState();
+  const [productsCart, setProductsCart] = useState([])
+  const [productsCost, setProductsCost] = useState([])
+
+  const [select, setSelect] = useState()
 
   const [formValue, setFormValue] = useState({
-    ancho: "",
-    alto: "",
-  });
+    ancho: '',
+    alto: '',
+  })
 
   const [producto, setProducto] = useState({
     producto: {
-      id: "",
-      nombre_producto: "",
-      unidad: "",
-      ancho: "",
-      alto: "",
-      precio: "",
-      imagen: "",
+      id: '',
+      nombre_producto: '',
+      unidad: '',
+      ancho: '',
+      alto: '',
+      precio: '',
+      imagen: '',
     },
-  });
+  })
 
   useEffect(() => {
-    getProductsCart();
-  }, []);
+    getProductsCost()
+  }, [])
 
-  const getProductsCart = async () => {
-    const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
-    const costos_productos = await respuesta.json();
-    // console.log(costos_productos);
-    setProductsCart(costos_productos);
-    console.log("Los productos son:" + productsCart);
-  };
+  const getProductsCost = async () => {
+    const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`)
+    const costos_productos = await respuesta.json()
+    setProductsCost(costos_productos)
+    console.log('Los productos son:' + productsCart)
+  }
 
   const getProductById = async () => {
     const respuesta = await fetch(
-      `${RUTA_API}/obtener_videojuego.php?id=${select}`
-    );
-    const productoById = await respuesta.json();
+      `${RUTA_API}/obtener_videojuego.php?id=${select}`,
+    )
+    const productoById = await respuesta.json()
     const producto1 = {
       id: productoById.id,
       nombre_producto: productoById.nombre_producto,
@@ -55,65 +56,50 @@ export default function BudgetForm(props) {
         formValue.ancho * formValue.alto * productoById.precio +
         Number(productoById.costo_instalacion),
       imagen: productoById.imagen,
-    };
+    }
 
-    setProducto(producto1);
-    console.log("el producto FINAL ES:" + JSON.stringify(producto1));
-  };
+    setProducto(producto1)
+    console.log('el producto FINAL ES:' + JSON.stringify(producto1))
+  }
 
   const calcularPresupuesto = (event, formValue) => {
-    event.preventDefault();
-    const { ancho, alto } = formValue;
+    event.preventDefault()
+    const { ancho, alto } = formValue
 
-    if (ancho == "" || alto == "" || select == 0) {
+    if (ancho == '' || alto == '' || select == 0) {
       toast(
-        "Debe completar todos los campos!" +
-          "Alto" +
+        'Debe completar todos los campos!' +
+          'Alto' +
           alto +
-          "ancho" +
+          'ancho' +
           ancho +
-          "select" +
-          select
-      );
+          'select' +
+          select,
+      )
     } else {
-      getProductById(select);
-      toast("El producto es!" + JSON.stringify(producto));
+      getProductById(select)
+      toast('El producto es!' + JSON.stringify(producto))
     }
-  };
+  }
 
   const onChange = (event) => {
     setFormValue({
       ...formValue,
       [event.target.name]: event.target.value,
-    });
-  };
+    })
+  }
 
   const addProductCart = (event, formValue) => {
-    event.preventDefault();
+    const addProducts = productsCart
+    addProducts.push(producto)
+    setProductsCart(addProducts)
+    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart)
+    getProductsCart()
+    toast('añadido al carrito correctamente.' + JSON.stringify(productsCart))
+  }
 
-    // const idsProducts = productsCart;
-    // idsProducts.push(id);
-    // setProductsCart(idsProducts);
-    // localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
-    // getProductsCart();
-    toast("añadido al carrito correctamente.");
-  };
-
-  const crearProducto = (event, formValue) => {
-    event.preventDefault();
-    // toast("los productosn son:" + JSON.stringify(productsCart));
-    getProductById(select);
-    // producto.id = filterProduct.id;
-    // producto.nombre_producto = filterProduct.nombre_producto;
-    // producto.ancho = formValue.ancho;
-    // producto.alto = formValue.alto;
-    // producto.precio = producto.alto * producto.ancho * filterProduct.precio;
-    toast("añadido al carrito correctamente.");
-  };
-
-  function findArrayElementByTitle(array, id) {
-    const newValue = array.find((number) => number.id === id);
-    console.log(newValue);
+  const getProductsCart = () => {
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART)
   }
 
   return (
@@ -178,5 +164,5 @@ export default function BudgetForm(props) {
       </div>
       {/* <!-- Location End --> */}
     </>
-  );
+  )
 }

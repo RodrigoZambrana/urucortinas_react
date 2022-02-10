@@ -1,9 +1,9 @@
-import React from "react";
-import { Col, Card, Button } from "react-bootstrap";
-import { BASE_PATH } from "./Constantes";
+import React from 'react'
+import { Col, Card, Button } from 'react-bootstrap'
+import { BASE_PATH } from './Constantes'
 
 export default function Product(props) {
-  const { producto, addProductCart } = props;
+  const { producto, addProductCart } = props
 
   return (
     <Col className="product">
@@ -14,16 +14,15 @@ export default function Product(props) {
         />
         <Card.Body>
           <Card.Title>{producto.nombre_producto}</Card.Title>
-          <Card.Text>{producto.precio} $ / Unidad</Card.Text>
-          <Button
-            onClick={() =>
-              addProductCart(producto.id, producto.nombre_producto)
-            }
-          >
+          <Card.Text>
+            {producto.ancho}x{producto.alto}
+          </Card.Text>
+          <Card.Text>{producto.precio} USD / Unidad</Card.Text>
+          <Button onClick={() => addProductCart(producto)}>
             Añadir al carrito
           </Button>
         </Card.Body>
       </Card>
     </Col>
-  );
+  )
 }

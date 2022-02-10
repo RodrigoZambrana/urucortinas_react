@@ -1,6 +1,25 @@
-import React from "react";
-import "./Header.scss";
+import React, { useState, useEffect } from 'react'
+import { STORAGE_PRODUCTS_CART } from './Constantes'
+import './Header.scss'
+import TopMenu from './TopMenu'
+
 export default function Header() {
+  const [productsCart, setProductsCart] = useState([])
+
+  useEffect(() => {
+    getProductsCart()
+  }, [])
+
+  const getProductsCart = () => {
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART)
+
+    if (idsProducts) {
+      setProductsCart(idsProducts)
+    } else {
+      setProductsCart([])
+    }
+  }
+
   return (
     <>
       <div className="top-bar">
@@ -155,16 +174,22 @@ export default function Header() {
                 <a href="location.html" className="nav-item nav-link">
                   Contacto
                 </a>
+                <div>
+                  {!productsCart.length ? (
+                    <TopMenu
+                      productsCart={productsCart}
+                      getProductsCart={getProductsCart}
+                    />
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </div>
-              <div className="ml-auto">
-                <a className="btn btn-custom" href="#">
-                  Whatsapp
-                </a>
-              </div>
+              <div className="ml-auto"></div>
             </div>
           </nav>
         </div>
       </div>
     </>
-  );
+  )
 }
