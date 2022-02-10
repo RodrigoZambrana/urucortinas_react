@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
+import { RUTA_API } from "./Constantes";
 
 export default function BudgetForm(props) {
-  const { sendBudget } = props;
+  const [productsCart, setProductsCart] = useState([]);
+
+  useEffect(() => {
+    getProductsCart();
+  }, []);
+
+  const getProductsCart = async () => {
+    const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
+    const costos_productos = await respuesta.json();
+    // console.log(costos_productos);
+    setProductsCart(costos_productos);
+    console.log(productsCart);
+  };
+
   const [formValue, setFormValue] = useState({
     ancho: "",
     alto: "",
@@ -46,6 +60,15 @@ export default function BudgetForm(props) {
                 placeholder="Ancho"
                 className="form-control"
               />
+            </div>
+            <div className="control-group">
+              <select name="nombres_productos" className="form-control">
+                {productsCart.map((elemento) => (
+                  <option key={elemento.id} value={elemento.id}>
+                    {elemento.nombre_producto}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="control-group">
               <input

@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import BudgetForm from './BudgetForm'
-import useFetch from './useFetch'
-import { urlApiProducts } from './Constantes'
-import { STORAGE_PRODUCTS_CART } from './Constantes'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React, { useState, useEffect } from "react";
+import BudgetForm from "./BudgetForm";
+import useFetch from "./useFetch";
+import { urlApiProducts } from "./Constantes";
+import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Budget(props) {
-  const products = useFetch(urlApiProducts, null)
-  const [productsCart, setProductsCart] = useState([])
-
-  useEffect(() => {
-    getProductsCart()
-  }, [])
+  const products = useFetch(urlApiProducts, null);
+  const [productsCart, setProductsCart] = useState([]);
 
   const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART)
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
 
     if (idsProducts) {
-      const idsProductsSplit = idsProducts.split(',')
-      setProductsCart(idsProductsSplit)
+      const idsProductsSplit = idsProducts.split(",");
+      setProductsCart(idsProductsSplit);
     } else {
-      setProductsCart([])
+      setProductsCart([]);
     }
-  }
+  };
 
   const addProductCart = (id, name) => {
-    const idsProducts = productsCart
-    idsProducts.push(id)
-    setProductsCart(idsProducts)
-    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart)
-    getProductsCart()
-    toast.success(`${name} añadido al carrito correctamente.`)
-  }
+    const idsProducts = productsCart;
+    idsProducts.push(id);
+    setProductsCart(idsProducts);
+    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
+    getProductsCart();
+    toast.success(`${name} añadido al carrito correctamente.`);
+  };
+
+  useEffect(() => {
+    getProductsCart();
+  }, []);
 
   return (
     <>
@@ -66,5 +66,5 @@ export default function Budget(props) {
       </div>
       {/* <!-- Location End --> */}
     </>
-  )
+  );
 }
