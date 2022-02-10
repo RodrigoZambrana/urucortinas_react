@@ -1,22 +1,38 @@
-import BudgetForm from "./BudgetForm";
-import PricesForm from "./PricesForm";
-
-import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useState, useEffect } from 'react'
+import BudgetForm from './BudgetForm'
+import useFetch from './useFetch'
+import { urlApiProducts } from './Constantes'
+import { STORAGE_PRODUCTS_CART } from './Constantes'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Budget(props) {
-  // const sendBudget = (event, formValue) => {
-  //   event.preventDefault();
-  //   const { ancho, alto } = formValue;
+  const products = useFetch(urlApiProducts, null)
+  const [productsCart, setProductsCart] = useState([])
 
-  //   if (ancho == "" || alto == "") {
-  //     toast("Debe completar todos los campos!");
-  //   } else {
-  //     const resultado = ancho * alto * 60 + 20;
-  //     toast("Presupuesto calculado con éxito!: " + resultado);
-  //   }
-  // };
+  useEffect(() => {
+    getProductsCart()
+  }, [])
+
+  const getProductsCart = () => {
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART)
+
+    if (idsProducts) {
+      const idsProductsSplit = idsProducts.split(',')
+      setProductsCart(idsProductsSplit)
+    } else {
+      setProductsCart([])
+    }
+  }
+
+  const addProductCart = (id, name) => {
+    const idsProducts = productsCart
+    idsProducts.push(id)
+    setProductsCart(idsProducts)
+    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart)
+    getProductsCart()
+    toast.success(`${name} añadido al carrito correctamente.`)
+  }
 
   return (
     <>
@@ -24,8 +40,7 @@ export default function Budget(props) {
       <div className="location">
         <div className="container">
           <div className="row">
-            {/* <PricesForm sendBudget={sendBudget} /> */}
-            <BudgetForm />
+            <BudgetForm products={products} addProductCart={addProductCart} />
 
             <div className="col-lg-6">
               <div className="section-header text-left">
@@ -51,5 +66,5 @@ export default function Budget(props) {
       </div>
       {/* <!-- Location End --> */}
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Constantes from "./Constantes";
+import { RUTA_API } from "./Constantes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FilaDeTablaDeVideojuego from "./FilaDeTablaDeVideojuego";
@@ -11,9 +11,7 @@ class VerVideojuegos extends React.Component {
     };
   }
   async componentDidMount() {
-    const respuesta = await fetch(
-      `${Constantes.RUTA_API}/obtener_costos_productos.php`
-    );
+    const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
     const costos_productos = await respuesta.json();
     this.setState({
       costos_productos: costos_productos,
