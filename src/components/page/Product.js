@@ -3,16 +3,20 @@ import { Col, Card, Button } from "react-bootstrap";
 import { BASE_PATH } from "./Constantes";
 
 export default function Product(props) {
-  const { product, addProductCart } = props;
+  const { producto, addProductCart } = props;
 
   return (
-    <Col xs={3} className="product">
+    <Col className="product">
       <Card>
-        <Card.Img variant="top" src={`${BASE_PATH}/${product.image}`} />
+        {/* <Card.Img variant="top" src={`${BASE_PATH}/${product.image}`} /> */}
         <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
-          <Card.Text>{product.price.toFixed(2)} € / Unidad</Card.Text>
-          <Button onClick={() => addProductCart(product.id, product.name)}>
+          <Card.Title>{producto.nombre_producto}</Card.Title>
+          <Card.Text>{producto.precio} € / Unidad</Card.Text>
+          <Button
+            onClick={() =>
+              addProductCart(producto.id, producto.nombre_producto)
+            }
+          >
             Añadir al carrito
           </Button>
         </Card.Body>

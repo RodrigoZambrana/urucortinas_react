@@ -25,6 +25,7 @@ export default function BudgetForm(props) {
       precio: "",
     },
   });
+
   useEffect(() => {
     getProductsCart();
   }, []);
@@ -43,8 +44,17 @@ export default function BudgetForm(props) {
       `${RUTA_API}/obtener_videojuego.php?id=${select}`
     );
     const productoById = await respuesta.json();
-    setProducto(productoById);
-    console.log("el producto FINAL ES:" + JSON.stringify(producto));
+    const producto1 = {
+      id: productoById.id,
+      nombre_producto: productoById.nombre_producto,
+      unidad: productoById.unidad,
+      ancho: formValue.ancho,
+      alto: formValue.alto,
+      precio: formValue.ancho * formValue.alto * productoById.precio,
+    };
+
+    setProducto(producto1);
+    console.log("el producto FINAL ES:" + JSON.stringify(producto1));
   };
 
   const calcularPresupuesto = (event, formValue) => {
@@ -140,12 +150,17 @@ export default function BudgetForm(props) {
           </Form>
         </div>
 
-        <h1>{select}</h1>
-        {/* <Product
-          key={producto.id}
-          producto={producto}
-          addProductCart={addProductCart}
-        /> */}
+        <div>
+          {producto.precio != null ? (
+            <Product
+              key={producto.id}
+              producto={producto}
+              addProductCart={addProductCart}
+            />
+          ) : (
+            <div></div>
+          )}
+        </div>
       </div>
       {/* <!-- Location End --> */}
     </>
