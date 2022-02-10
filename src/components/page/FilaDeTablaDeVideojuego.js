@@ -8,6 +8,7 @@ class FilaDeTablaDeVideojuego extends React.Component {
       // Si han eliminado este juego, no necesitamos mostrarlo
       eliminado: false,
     };
+    console.log(this.props.costo_producto);
     // this.redireccionarParaEditar = this.redireccionarParaEditar.bind(this)
     // this.eliminar = this.eliminar.bind(this)
   }
@@ -63,6 +64,9 @@ class FilaDeTablaDeVideojuego extends React.Component {
         <td>{this.props.costo_producto.nombre_producto}</td>
         <td>{this.props.costo_producto.unidad}</td>
         <td>{this.props.costo_producto.precio}</td>
+        <td>{this.props.costo_producto.costo_instalacion}</td>
+        <td>{this.props.costo_producto.imagen}</td>
+
         <td></td>
         <td>
           {/* <button onClick={this.eliminar} className="button is-danger">

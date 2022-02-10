@@ -8,10 +8,13 @@ export default function Product(props) {
   return (
     <Col className="product">
       <Card>
-        {/* <Card.Img variant="top" src={`${BASE_PATH}/${product.image}`} /> */}
+        <Card.Img
+          variant="top"
+          src={`${BASE_PATH}/img/presupuesto_img/${producto.imagen}`}
+        />
         <Card.Body>
           <Card.Title>{producto.nombre_producto}</Card.Title>
-          <Card.Text>{producto.precio} € / Unidad</Card.Text>
+          <Card.Text>{producto.precio} $ / Unidad</Card.Text>
           <Button
             onClick={() =>
               addProductCart(producto.id, producto.nombre_producto)

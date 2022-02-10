@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import { RUTA_API } from "./Constantes";
+import { opcionesSelectPresupuesto } from "./Constantes";
 import { STORAGE_PRODUCTS_CART } from "./Constantes";
 
 import Product from "./Product";
@@ -23,6 +24,7 @@ export default function BudgetForm(props) {
       ancho: "",
       alto: "",
       precio: "",
+      imagen: "",
     },
   });
 
@@ -35,11 +37,10 @@ export default function BudgetForm(props) {
     const costos_productos = await respuesta.json();
     // console.log(costos_productos);
     setProductsCart(costos_productos);
-    console.log(productsCart);
+    console.log("Los productos son:" + productsCart);
   };
 
   const getProductById = async () => {
-    console.log("el nunero de select es: " + select);
     const respuesta = await fetch(
       `${RUTA_API}/obtener_videojuego.php?id=${select}`
     );
@@ -50,7 +51,10 @@ export default function BudgetForm(props) {
       unidad: productoById.unidad,
       ancho: formValue.ancho,
       alto: formValue.alto,
-      precio: formValue.ancho * formValue.alto * productoById.precio,
+      precio:
+        formValue.ancho * formValue.alto * productoById.precio +
+        Number(productoById.costo_instalacion),
+      imagen: productoById.imagen,
     };
 
     setProducto(producto1);
@@ -61,9 +65,19 @@ export default function BudgetForm(props) {
     event.preventDefault();
     const { ancho, alto } = formValue;
 
-    if (ancho == "" || alto == "") {
-      toast("Debe completar todos los campos!");
+    if (ancho == "" || alto == "" || select == 0) {
+      toast(
+        "Debe completar todos los campos!" +
+          "Alto" +
+          alto +
+          "ancho" +
+          ancho +
+          "select" +
+          select
+      );
     } else {
+      getProductById(select);
+      toast("El producto es!" + JSON.stringify(producto));
     }
   };
 
@@ -110,7 +124,7 @@ export default function BudgetForm(props) {
         <div className="location-form">
           <h3>Cálculo de presupuesto</h3>
           <Form
-            onSubmit={(event) => crearProducto(event, formValue)}
+            onSubmit={(event) => calcularPresupuesto(event, formValue)}
             onChange={onChange}
           >
             <div className="control-group">
@@ -119,9 +133,9 @@ export default function BudgetForm(props) {
                 className="form-control"
                 onChange={(e) => setSelect(e.target.value)}
               >
-                {productsCart.map((elemento) => (
+                {opcionesSelectPresupuesto.map((elemento) => (
                   <option key={elemento.id} value={elemento.id}>
-                    {elemento.nombre_producto}
+                    {elemento.text}
                   </option>
                 ))}
               </select>

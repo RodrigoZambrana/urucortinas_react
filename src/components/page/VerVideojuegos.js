@@ -32,7 +32,9 @@ class VerVideojuegos extends React.Component {
                   <th>Id</th>
                   <th>Nombre</th>
                   <th>Unidad</th>
-                  <th>Precio</th>
+                  <th>Precio m2</th>
+                  <th>costo instalación</th>
+                  <th>imagen</th>
                 </tr>
               </thead>
               <tbody>
