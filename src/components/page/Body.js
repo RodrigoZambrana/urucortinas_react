@@ -1,8 +1,7 @@
-import React from "react";
-import Carousel from "./Carousel";
-import OfferedProducts from "./OfferedProducts";
 import VerVideojuegos from "./VerVideojuegos";
 import Cart from "./Cart";
+import React, { useState, useEffect } from "react";
+import { STORAGE_PRODUCTS_CART } from "./Constantes";
 
 // import Budget from "./Budget";
 import Budget from "./Budget";
@@ -10,6 +9,22 @@ import Budget from "./Budget";
 import { Helmet } from "react-helmet";
 
 export default function Body() {
+  const [productsCart, setProductsCart] = useState([]);
+
+  useEffect(() => {
+    getProductsCart();
+  }, []);
+
+  const getProductsCart = () => {
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
+
+    if (idsProducts) {
+      setProductsCart(idsProducts);
+    } else {
+      setProductsCart([]);
+    }
+  };
+
   return (
     <>
       {/* <!-- Carousel Start --> */}
@@ -34,7 +49,7 @@ export default function Body() {
       </Helmet>
       {/* <Carousel /> */}
       {/* <OfferedProducts /> */}
-      <Cart />
+      <Cart productsCart={productsCart} getProductsCart={getProductsCart} />
 
       <Budget />
       {/* contenedor del form de presupuesto */}

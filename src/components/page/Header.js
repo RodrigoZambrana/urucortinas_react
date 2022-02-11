@@ -4,22 +4,6 @@ import Button from "react-bootstrap/Button";
 import Cart from "./Cart";
 
 export default function Header() {
-  const [productsCart, setProductsCart] = useState([]);
-
-  useEffect(() => {
-    getProductsCart();
-  }, []);
-
-  const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
-
-    if (idsProducts) {
-      setProductsCart(idsProducts);
-    } else {
-      setProductsCart([]);
-    }
-  };
-
   return (
     <>
       <div className="top-bar">
