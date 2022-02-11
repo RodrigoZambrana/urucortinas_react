@@ -2192,3 +2192,11 @@ a:focus {
   border-color: #0098d3;
   border-radius: 50px;
 }
+
+.carrito-icon {
+  width: 100%;
+  background-color: transparent;
+  color: #0098d3;
+  border-color: #0098d3;
+  border-radius: 50px;
+}

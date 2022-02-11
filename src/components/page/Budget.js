@@ -21,15 +21,6 @@ export default function Budget(props) {
     }
   };
 
-  const addProductCart = (id, name) => {
-    const idsProducts = productsCart;
-    idsProducts.push(id);
-    setProductsCart(idsProducts);
-    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
-    getProductsCart();
-    toast.success(`${name} añadido al carrito correctamente.`);
-  };
-
   useEffect(() => {
     getProductsCart();
   }, []);
@@ -40,7 +31,7 @@ export default function Budget(props) {
       <div className="location">
         <div className="container">
           <div className="row">
-            <BudgetForm products={products} addProductCart={addProductCart} />
+            <BudgetForm products={products} />
 
             <div className="col-lg-6">
               <div className="section-header text-left">

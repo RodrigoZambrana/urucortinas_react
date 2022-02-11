@@ -81,13 +81,13 @@ export default function BudgetForm(props) {
     });
   };
 
-  const addProductCart = (event, formValue) => {
+  const addProductCart = () => {
     const addProducts = productsCart;
     addProducts.push(producto);
     setProductsCart(addProducts);
     localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
     getProductsCart();
-    toast("añadido al carrito correctamente." + JSON.stringify(productsCart));
+    toast.success("Agregado correctamente");
   };
 
   const getProductsCart = () => {

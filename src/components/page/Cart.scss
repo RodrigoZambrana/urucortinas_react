@@ -1,7 +1,7 @@
 .cart {
   svg {
     width: 30px;
-    fill: #343a40;
+    fill: #0098d3;
   }
 }
 
@@ -11,7 +11,7 @@
   top: 0;
   right: 0;
   background-color: #343a40;
-  height: 172vh;
+  height: 100vh;
   text-align: left;
   white-space: nowrap;
   transition: width 1s;
@@ -136,6 +136,11 @@
         &:last-of-type {
           font-weight: bold;
           font-size: 20px;
+          display: inline-block;
+          font-size: inherit;
+          height: 1em;
+          overflow: visible;
+          vertical-align: -0.125em;
         }
       }
     }
