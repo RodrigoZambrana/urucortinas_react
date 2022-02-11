@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import { STORAGE_PRODUCTS_CART } from './Constantes'
-import './Header.scss'
-import TopMenu from './TopMenu'
+import React, { useState, useEffect } from "react";
+import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import Button from "react-bootstrap/Button";
+import Cart from "./Cart";
 
 export default function Header() {
-  const [productsCart, setProductsCart] = useState([])
+  const [productsCart, setProductsCart] = useState([]);
 
   useEffect(() => {
-    getProductsCart()
-  }, [])
+    getProductsCart();
+  }, []);
 
   const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART)
+    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
 
     if (idsProducts) {
-      setProductsCart(idsProducts)
+      setProductsCart(idsProducts);
     } else {
-      setProductsCart([])
+      setProductsCart([]);
     }
-  }
+  };
 
   return (
     <>
       <div className="top-bar">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-4 col-md-12">
+            <div className="col-lg-4 col-md-8">
               <div className="logo">
                 <a href="index.html">
                   <img src="img/logo/logo.svg" alt="logo urucortinas" />
@@ -87,7 +87,6 @@ export default function Header() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-
             <div
               className="collapse navbar-collapse justify-content-between"
               id="navbarCollapse"
@@ -174,16 +173,6 @@ export default function Header() {
                 <a href="location.html" className="nav-item nav-link">
                   Contacto
                 </a>
-                <div>
-                  {!productsCart.length ? (
-                    <TopMenu
-                      productsCart={productsCart}
-                      getProductsCart={getProductsCart}
-                    />
-                  ) : (
-                    <div></div>
-                  )}
-                </div>
               </div>
               <div className="ml-auto"></div>
             </div>
@@ -191,5 +180,5 @@ export default function Header() {
         </div>
       </div>
     </>
-  )
+  );
 }

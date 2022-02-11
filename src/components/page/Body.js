@@ -1,12 +1,13 @@
-import React from 'react'
-import Carousel from './Carousel'
-import OfferedProducts from './OfferedProducts'
-import VerVideojuegos from './VerVideojuegos'
+import React from "react";
+import Carousel from "./Carousel";
+import OfferedProducts from "./OfferedProducts";
+import VerVideojuegos from "./VerVideojuegos";
+import Cart from "./Cart";
 
 // import Budget from "./Budget";
-import Budget from './Budget'
+import Budget from "./Budget";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 export default function Body() {
   return (
@@ -33,6 +34,8 @@ export default function Body() {
       </Helmet>
       {/* <Carousel /> */}
       {/* <OfferedProducts /> */}
+      <Cart />
+
       <Budget />
       {/* contenedor del form de presupuesto */}
       <VerVideojuegos />
@@ -50,9 +53,9 @@ export default function Body() {
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
         {/* <!-- Template Javascript --> */}
-        {window.location.origin + '/js/main.js'}
+        {window.location.origin + "/js/main.js"}
         <script src="/js/main.js"></script>
       </Helmet>
     </>
-  )
+  );
 }
