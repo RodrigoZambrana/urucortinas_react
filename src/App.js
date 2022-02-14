@@ -26,13 +26,11 @@ function App() {
 
   const addProductCart = (producto) => {
     const productosAgregados = productsCart;
-    productosAgregados.push(producto);
-    console.log("Productos Agregados:" + JSON.stringify(productosAgregados));
+    productosAgregados.push(JSON.stringify(producto));
     setProductsCart(productosAgregados);
-    localStorage.setItem(STORAGE_PRODUCTS_CART, JSON.stringify(productsCart));
+    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
     console.log(
-      "La lista de productos es:" +
-        JSON.stringify(localStorage.getItem(STORAGE_PRODUCTS_CART))
+      "La lista de productos es:" + localStorage.getItem(STORAGE_PRODUCTS_CART)
     );
     getProductsCart();
     toast.success(

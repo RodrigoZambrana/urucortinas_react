@@ -47,6 +47,7 @@ export default function Cart(props) {
     localStorage.setItem(STORAGE_PRODUCTS_CART, result);
     getProductsCart();
   };
+  console.log("ultima linea:" + productsCart);
 
   return (
     <>
@@ -60,8 +61,8 @@ export default function Cart(props) {
 
       <div className="cart-content" style={{ width: widthCartContent }}>
         <CartContentHeader closeCart={closeCart} emptyCart={emptyCart} />
-        {productsCart.map((idProductCart, index) => (
-          <CartContentProducts product={productsCart} />
+        {productsCart.map((product) => (
+          <RenderProduct key={product} product={product} />
         ))}
       </div>
     </>
@@ -86,5 +87,35 @@ function CartContentHeader(props) {
 }
 
 function CartContentProducts(props) {
-  return "Products....";
+  const { product } = props;
+  console.log("CartContentProducts" + product);
+
+  return <RenderProduct product={product} />;
+}
+
+function RenderProduct(props) {
+  const { product } = props;
+  console.log(product);
+
+  return (
+    <div className="cart-content__product">
+      <img
+        src={`${BASE_PATH}/img/presupuesto_img/${product.ruta_imagen}`}
+        alt={product.nombre_producto}
+      />
+      <div className="cart-content__product-info">
+        <div>
+          <h3>{product.nombre_producto}</h3>
+          <p>{product.prrecio} € / ud.</p>
+        </div>
+        <div>
+          {/* <p>En carri: {quantity} ud.</p> */}
+          <div>
+            {/* <button onClick={() => increaseQuantity(product.id)}>+</button>
+            <button onClick={() => decreaseQuantity(product.id)}>-</button> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
