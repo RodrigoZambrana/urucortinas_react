@@ -8,6 +8,6 @@ export const opcionesSelectPresupuesto = [
   { id: 1, text: "Roller" },
   { id: 2, text: "Bandas Verticales" },
   { id: 3, text: "Veneciana" },
-  { id: 5, text: "Catalana PVC" },
-  { id: 6, text: "Catalana Aluminio" },
+  { id: 4, text: "Catalana PVC" },
+  { id: 5, text: "Catalana Aluminio" },
 ];

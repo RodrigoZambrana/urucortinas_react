@@ -8,9 +8,8 @@ import { STORAGE_PRODUCTS_CART } from "./Constantes";
 import Product from "./Product";
 
 export default function BudgetForm(props) {
-  const [productsCart, setProductsCart] = useState([]);
+  const { addProductCart } = props;
   const [productsCost, setProductsCost] = useState([]);
-
   const [select, setSelect] = useState();
 
   const [formValue, setFormValue] = useState({
@@ -26,7 +25,7 @@ export default function BudgetForm(props) {
       ancho: "",
       alto: "",
       precio: "",
-      imagen: "",
+      ruta_imagen: "",
     },
   });
 
@@ -38,7 +37,6 @@ export default function BudgetForm(props) {
     const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
     const costos_productos = await respuesta.json();
     setProductsCost(costos_productos);
-    console.log("Los productos son:" + productsCart);
   };
 
   const getProductById = async () => {
@@ -46,6 +44,7 @@ export default function BudgetForm(props) {
       `${RUTA_API}/obtener_videojuego.php?id=${select}`
     );
     const productoById = await respuesta.json();
+
     const producto1 = {
       id: productoById.id,
       nombre_producto: productoById.nombre_producto,
@@ -55,7 +54,7 @@ export default function BudgetForm(props) {
       precio:
         formValue.ancho * formValue.alto * productoById.precio +
         Number(productoById.costo_instalacion),
-      imagen: productoById.imagen,
+      ruta_imagen: productoById.ruta_imagen,
     };
 
     setProducto(producto1);
@@ -70,7 +69,6 @@ export default function BudgetForm(props) {
       toast("Debe completar todos los campos!");
     } else {
       getProductById(select);
-      toast("El producto es!" + JSON.stringify(producto));
     }
   };
 
@@ -79,19 +77,6 @@ export default function BudgetForm(props) {
       ...formValue,
       [event.target.name]: event.target.value,
     });
-  };
-
-  const addProductCart = () => {
-    const addProducts = productsCart;
-    addProducts.push(producto);
-    setProductsCart(addProducts);
-    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
-    getProductsCart();
-    toast.success("Agregado correctamente");
-  };
-
-  const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
   };
 
   return (

@@ -7,23 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Budget(props) {
-  const products = useFetch(urlApiProducts, null);
-  const [productsCart, setProductsCart] = useState([]);
-
-  const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
-
-    if (idsProducts) {
-      const idsProductsSplit = idsProducts.split(",");
-      setProductsCart(idsProductsSplit);
-    } else {
-      setProductsCart([]);
-    }
-  };
-
-  useEffect(() => {
-    getProductsCart();
-  }, []);
+  const { addProductCart } = props;
 
   return (
     <>
@@ -31,7 +15,7 @@ export default function Budget(props) {
       <div className="location">
         <div className="container">
           <div className="row">
-            <BudgetForm products={products} />
+            <BudgetForm addProductCart={addProductCart} />
 
             <div className="col-lg-6">
               <div className="section-header text-left">

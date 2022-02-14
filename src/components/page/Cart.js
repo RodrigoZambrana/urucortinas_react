@@ -15,15 +15,9 @@ import {
 import "./Cart.scss";
 
 export default function Cart(props) {
-  const { productsCart, getProductsCart, products } = props;
+  const { productsCart, getProductsCart, products, addProductCart } = props;
   const [cartOpen, setCartOpen] = useState(false);
   const widthCartContent = cartOpen ? 400 : 0;
-  const [singelProductsCart, setSingelProductsCart] = useState([]);
-
-  useEffect(() => {
-    const allProductsId = removeArrayDuplicates(productsCart);
-    setSingelProductsCart(allProductsId);
-  }, [productsCart]);
 
   const openCart = () => {
     setCartOpen(true);
@@ -66,7 +60,7 @@ export default function Cart(props) {
 
       <div className="cart-content" style={{ width: widthCartContent }}>
         <CartContentHeader closeCart={closeCart} emptyCart={emptyCart} />
-        {singelProductsCart.map((idProductCart, index) => (
+        {productsCart.map((idProductCart, index) => (
           <CartContentProducts product={productsCart} />
         ))}
       </div>

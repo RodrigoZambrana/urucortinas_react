@@ -1,6 +1,4 @@
 import React from "react";
-import { toast } from "react-toastify";
-import Constantes from "./Constantes";
 class FilaDeTablaDeVideojuego extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +19,7 @@ class FilaDeTablaDeVideojuego extends React.Component {
         <td>{this.props.costo_producto.unidad}</td>
         <td>{this.props.costo_producto.precio}</td>
         <td>{this.props.costo_producto.costo_instalacion}</td>
-        <td>{this.props.costo_producto.imagen}</td>
+        <td>{this.props.costo_producto.ruta_imagen}</td>
 
         <td></td>
         <td></td>

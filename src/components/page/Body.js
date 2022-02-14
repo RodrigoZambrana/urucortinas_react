@@ -8,22 +8,8 @@ import Budget from "./Budget";
 
 import { Helmet } from "react-helmet";
 
-export default function Body() {
-  const [productsCart, setProductsCart] = useState([]);
-
-  useEffect(() => {
-    getProductsCart();
-  }, []);
-
-  const getProductsCart = () => {
-    const idsProducts = localStorage.getItem(STORAGE_PRODUCTS_CART);
-
-    if (idsProducts) {
-      setProductsCart(idsProducts);
-    } else {
-      setProductsCart([]);
-    }
-  };
+export default function Body(props) {
+  const { productsCart, getProductsCart, products, addProductCart } = props;
 
   return (
     <>
@@ -51,7 +37,7 @@ export default function Body() {
       {/* <OfferedProducts /> */}
       <Cart productsCart={productsCart} getProductsCart={getProductsCart} />
 
-      <Budget />
+      <Budget addProductCart={addProductCart} />
       {/* contenedor del form de presupuesto */}
       <VerVideojuegos />
       {/* Testimonial End */}
