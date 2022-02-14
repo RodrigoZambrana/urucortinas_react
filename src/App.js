@@ -24,16 +24,20 @@ function App() {
     }
   };
 
-  const addProductCart = (id, name) => {
-    const idsProducts = productsCart;
-    idsProducts.push(id);
-    setProductsCart(idsProducts);
-    localStorage.setItem(STORAGE_PRODUCTS_CART, productsCart);
+  const addProductCart = (producto) => {
+    const productosAgregados = productsCart;
+    productosAgregados.push(producto);
+    console.log("Productos Agregados:" + JSON.stringify(productosAgregados));
+    setProductsCart(productosAgregados);
+    localStorage.setItem(STORAGE_PRODUCTS_CART, JSON.stringify(productsCart));
     console.log(
-      "La lista de productos es:" + localStorage.getItem(STORAGE_PRODUCTS_CART)
+      "La lista de productos es:" +
+        JSON.stringify(localStorage.getItem(STORAGE_PRODUCTS_CART))
     );
     getProductsCart();
-    toast.success(`${name} añadido al carrito correctamente.`);
+    toast.success(
+      `${producto.nombre_producto} añadido al carrito correctamente.`
+    );
   };
 
   return (
