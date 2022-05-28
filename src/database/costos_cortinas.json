@@ -3,7 +3,9 @@
     "id_producto": 1,
     "unidad": "M2-ROLLER",
     "Moneda": "USD",
-    "precio": 60
+    "precio": 60,
+    "costo_instalacion": 20,
+    "ruta_imagen": 60
   },
   {
     "id_producto": 2,
