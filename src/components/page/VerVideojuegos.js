@@ -10,13 +10,13 @@ class VerVideojuegos extends React.Component {
       costos_productos: [],
     };
   }
-  async componentDidMount() {
-    const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
-    const costos_productos = await respuesta.json();
-    this.setState({
-      costos_productos: costos_productos,
-    });
-  }
+  // async componentDidMount() {
+  //   const respuesta = await fetch(`${RUTA_API}/obtener_costos_productos.php`);
+  //   const costos_productos = await respuesta.json();
+  //   this.setState({
+  //     costos_productos: costos_productos,
+  //   });
+  // }
   render() {
     return (
       <div className="testimonial">

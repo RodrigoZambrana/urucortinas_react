@@ -4,13 +4,14 @@ import { ToastContainer, toast } from "react-toastify";
 import { RUTA_API } from "./Constantes";
 import { opcionesSelectPresupuesto } from "./Constantes";
 import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import BudgetInfo from "./BudgetInfo";
 
 import Product from "./Product";
 
 export default function BudgetForm(props) {
   const { addProductCart } = props;
   const [productsCost, setProductsCost] = useState([]);
-  const [select, setSelect] = useState();
+  const [select, setSelect] = useState(-1);
 
   const [formValue, setFormValue] = useState({
     ancho: "",
@@ -65,7 +66,7 @@ export default function BudgetForm(props) {
     event.preventDefault();
     const { ancho, alto } = formValue;
 
-    if (ancho == "" || alto == "" || select == 0) {
+    if (ancho == "" || alto == "" || select == -1) {
       toast("Debe completar todos los campos!");
     } else {
       getProductById(select);
@@ -82,52 +83,56 @@ export default function BudgetForm(props) {
   return (
     <>
       {/* <!-- Location Start --> */}
-
-      <div className="col-lg-6">
-        <div className="location-form">
-          <h3>Cálculo de presupuesto</h3>
-          <Form
-            onSubmit={(event) => calcularPresupuesto(event, formValue)}
-            onChange={onChange}
-          >
-            <div className="control-group">
-              <select
-                name="nombres_productos"
-                className="form-control"
-                onChange={(e) => setSelect(e.target.value)}
-              >
-                {opcionesSelectPresupuesto.map((elemento) => (
-                  <option key={elemento.id} value={elemento.id}>
-                    {elemento.text}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="control-group">
-              <input
-                name="ancho"
-                type="number"
-                placeholder="Ancho"
-                className="form-control"
-              />
-            </div>
-            <div className="control-group">
-              <input
-                type="number"
-                name="alto"
-                placeholder="Alto"
-                className="form-control"
-              />
-            </div>
-            <div>
-              <Button className="btn btn-custom" type="submit">
-                Calcular
-              </Button>
-            </div>
-          </Form>
+      <div className="row">
+        <div className="col-lg-12">
+          <BudgetInfo />
         </div>
-
-        <div>
+        <div className="col-lg-6">
+          <div className="location-form">
+            <h3>Cálculo de presupuesto</h3>
+            <Form
+              onSubmit={(event) => calcularPresupuesto(event, formValue)}
+              onChange={onChange}
+            >
+              <div className="control-group">
+                <select
+                  name="nombres_productos"
+                  className="form-control"
+                  onChange={(e) => setSelect(e.target.value)}
+                >
+                  <option value="-1">Seleccione una opción</option>
+                  {opcionesSelectPresupuesto.map((elemento) => (
+                    <option key={elemento.id} value={elemento.id}>
+                      {elemento.text}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="control-group">
+                <input
+                  name="ancho"
+                  type="number"
+                  placeholder="Ancho"
+                  className="form-control"
+                />
+              </div>
+              <div className="control-group">
+                <input
+                  type="number"
+                  name="alto"
+                  placeholder="Alto"
+                  className="form-control"
+                />
+              </div>
+              <div>
+                <Button className="btn btn-custom" type="submit">
+                  Calcular
+                </Button>
+              </div>
+            </Form>
+          </div>
+        </div>
+        <div className="col-lg-6">
           {producto.precio != null ? (
             <Product
               key={producto.id}
@@ -139,6 +144,7 @@ export default function BudgetForm(props) {
           )}
         </div>
       </div>
+
       {/* <!-- Location End --> */}
     </>
   );

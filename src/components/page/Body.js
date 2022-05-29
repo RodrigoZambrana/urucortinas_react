@@ -1,13 +1,13 @@
-import VerVideojuegos from './VerVideojuegos'
-import Cart from './Cart'
-import React, { useState, useEffect } from 'react'
-import { STORAGE_PRODUCTS_CART } from './Constantes'
-import Budget from './Budget'
+import VerVideojuegos from "./VerVideojuegos";
+import Cart from "./Cart";
+import React, { useState, useEffect } from "react";
+import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import Budget from "./Budget";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 export default function Body(props) {
-  const { productsCart, getProductsCart, products, addProductCart } = props
+  const { productsCart, getProductsCart, products, addProductCart } = props;
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function Body(props) {
 
       <Budget addProductCart={addProductCart} />
       {/* contenedor del form de presupuesto */}
-      <VerVideojuegos />
+      {/* <VerVideojuegos /> */}
       {/* Testimonial End */}
       {/* Calcular presupuesto */}
       {/* <!-- JavaScript Libraries --> */}
@@ -52,9 +52,9 @@ export default function Body(props) {
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
         {/* <!-- Template Javascript --> */}
-        {window.location.origin + '/js/main.js'}
+        {window.location.origin + "/js/main.js"}
         <script src="/js/main.js"></script>
       </Helmet>
     </>
-  )
+  );
 }
