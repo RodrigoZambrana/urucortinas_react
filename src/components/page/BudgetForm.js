@@ -50,16 +50,16 @@ export default function BudgetForm(props) {
       id: productoById.id,
       nombre_producto: productoById.nombre_producto,
       unidad: productoById.unidad,
-      ancho: formValue.ancho,
-      alto: formValue.alto,
+      ancho: Number(formValue.ancho),
+      alto: Number(formValue.alto),
       precio:
-        formValue.ancho * formValue.alto * productoById.precio +
+        Number(formValue.ancho) *
+          Number(formValue.alto) *
+          Number(productoById.precio) +
         Number(productoById.costo_instalacion),
       ruta_imagen: productoById.ruta_imagen,
     };
-
     setProducto(producto1);
-    console.log("el producto FINAL ES:" + JSON.stringify(producto1));
   };
 
   const calcularPresupuesto = (event, formValue) => {
@@ -68,6 +68,9 @@ export default function BudgetForm(props) {
 
     if (ancho == "" || alto == "" || select == -1) {
       toast("Debe completar todos los campos!");
+    }
+    if (Number(ancho) <= 0 || Number(alto) <= 0) {
+      toast("Ancho y Alto deben ser mayores a 0");
     } else {
       getProductById(select);
     }
@@ -111,16 +114,18 @@ export default function BudgetForm(props) {
               <div className="control-group">
                 <input
                   name="ancho"
-                  type="number"
                   placeholder="Ancho"
+                  pattern="^(\d*\.)?\d+$"
+                  title="Ingrese únicamente números"
                   className="form-control"
                 />
               </div>
               <div className="control-group">
                 <input
-                  type="number"
                   name="alto"
                   placeholder="Alto"
+                  pattern="^(\d*\.)?\d+$"
+                  title="Ingrese únicamente números"
                   className="form-control"
                 />
               </div>

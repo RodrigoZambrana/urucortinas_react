@@ -970,6 +970,7 @@ a:focus {
   background: #e81c2e;
   border-radius: 5px;
   margin-bottom: 10px;
+  min-height: 520px;
 }
 
 .location .location-form h3 {
@@ -2204,4 +2205,11 @@ a:focus {
 
 .card {
   margin: 0px;
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  max-height: 300px;
 }

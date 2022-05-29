@@ -4,9 +4,10 @@ export const BASE_PATH = "http://localhost:3000";
 export const STORAGE_PRODUCTS_CART = "productsCart";
 
 export const opcionesSelectPresupuesto = [
-  { id: 1, text: "Roller" },
+  { id: 1, text: "Cortina Roller" },
   { id: 2, text: "Bandas Verticales" },
   { id: 3, text: "Veneciana" },
-  { id: 4, text: "Catalana PVC" },
-  { id: 5, text: "Catalana Aluminio" },
+  { id: 4, text: "Persiana PVC (Sin albañilería)" },
+  { id: 5, text: "Persiana Aluminio Blanco (Sin albañilería)" },
+  { id: 6, text: "Persiana Aluminio Color (Sin albañilería)" },
 ];

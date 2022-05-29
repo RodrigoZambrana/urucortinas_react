@@ -15,9 +15,11 @@ export default function Product(props) {
         <Card.Body>
           <Card.Title>{producto.nombre_producto}</Card.Title>
           <Card.Text>
-            {producto.ancho}x{producto.alto}
+            Medidas: {producto.ancho.toFixed(2)}x{producto.alto.toFixed(2)}
           </Card.Text>
-          <Card.Text>{producto.precio} USD / Unidad</Card.Text>
+          <Card.Text>
+            Costo: {producto.precio.toFixed(2)} USD / Unidad
+          </Card.Text>
           <Button onClick={() => addProductCart(producto)}>
             Añadir al carrito
           </Button>
