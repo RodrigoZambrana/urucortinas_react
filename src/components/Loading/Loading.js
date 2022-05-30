@@ -1,5 +1,5 @@
-import React from "react";
-import { Spinner } from "react-bootstrap";
+import React from "./node_modules/react";
+import { Spinner } from "./node_modules/react-bootstrap";
 
 import "./Loading.scss";
 

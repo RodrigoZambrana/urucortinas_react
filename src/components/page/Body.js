@@ -1,7 +1,5 @@
-import VerVideojuegos from "./VerVideojuegos";
 import Cart from "./Cart";
-import React, { useState, useEffect } from "react";
-import { STORAGE_PRODUCTS_CART } from "./Constantes";
+import React from "react";
 import Budget from "./Budget";
 
 import { Helmet } from "react-helmet";

@@ -1,10 +1,7 @@
 import React from "react";
-// import LogoBar from "./components/topBar/LogoBar";
-
-export default function Header() {
+export default function NavBar() {
   return (
     <>
-      {/* <LogoBar /> */}
       <div className="nav-bar">
         <div className="container">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark">

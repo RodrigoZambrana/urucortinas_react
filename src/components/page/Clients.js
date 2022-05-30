@@ -1,5 +1,5 @@
 import React from "react";
-export default function Body() {
+export default function Clients() {
   return (
     <div className="testimonial">
       <div className="container">
