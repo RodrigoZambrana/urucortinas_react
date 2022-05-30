@@ -4,7 +4,7 @@ import React, { useState } from "react";
 export default function MercadoPago() {
   return (
     <>
-      {" "}
+      {/* {" "}
       <div
         className="facts"
         data-parallax="scroll"
@@ -41,7 +41,7 @@ export default function MercadoPago() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         className="facts"
         data-parallax="scroll"

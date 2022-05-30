@@ -2213,3 +2213,10 @@ a:focus {
   border-top-right-radius: calc(0.25rem - 1px);
   max-height: 300px;
 }
+
+.facts .btn {
+  border-color: white;
+}
+.footer-social .btn {
+  border-color: white;
+}
