@@ -1,5 +1,6 @@
+import Cart from "./Cart";
 import React from "react";
-import BasePage from "../basePage/BasePage";
+import Budget from "./Budget";
 
 import { Helmet } from "react-helmet";
 
@@ -28,12 +29,11 @@ export default function Body(props) {
         {/* <!-- Template Stylesheet --> */}
         <link href="/css/style.css" rel="stylesheet" />
       </Helmet>
-      <BasePage />
-
       {/* <Carousel /> */}
       {/* <OfferedProducts /> */}
-      {/* <Cart productsCart={productsCart} getProductsCart={getProductsCart} /> */}
-      {/* <Budget addProductCart={addProductCart} /> */}
+      <Cart productsCart={productsCart} getProductsCart={getProductsCart} />
+
+      <Budget addProductCart={addProductCart} />
       {/* contenedor del form de presupuesto */}
       {/* <VerVideojuegos /> */}
       {/* Testimonial End */}

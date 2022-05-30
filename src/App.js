@@ -1,12 +1,10 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
-import Footer from "./components/page/Footer";
-import BasePage from "./components/basePage/BasePage";
+import Body from "./components/page/Body";
 
 function App() {
   return (
     <div className="App">
-      <BasePage />
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -18,7 +16,7 @@ function App() {
         draggable
         pauseOnHover={false}
       />
-      <Footer />
+      <Body />
     </div>
   );
 }
