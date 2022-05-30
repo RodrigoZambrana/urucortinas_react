@@ -11,32 +11,38 @@ export default function Footer() {
                 <h2>Información de contacto</h2>
                 <p>
                   <i className="fa fa-map-marker-alt"></i>
-                  123 Street, New York, USA
+                  Montevideo, Uruguay
                 </p>
                 <p>
                   <i className="fa fa-phone-alt"></i>
-                  +012 345 67890
+                  097 365 931
                 </p>
                 <p>
                   <i className="fa fa-envelope"></i>
-                  info@example.com
+                  ventas@urucortinas.com.uy
                 </p>
                 <div className="footer-social">
-                  <a className="btn" href="">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn" href="">
+                  <a
+                    className="btn"
+                    href="https://www.facebook.com/urucortinas"
+                  >
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a className="btn" href="">
+                  <a
+                    className="btn"
+                    href="https://www.youtube.com/channel/UCoH1AM4QG3iTettyVnkGDUA"
+                  >
                     <i className="fab fa-youtube"></i>
                   </a>
-                  <a className="btn" href="">
+                  <a
+                    className="btn"
+                    href="https://www.instagram.com/urucortinas_uy/"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a className="btn" href="">
+                  {/* <a className="btn" href="">
                     <i className="fab fa-linkedin-in"></i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -46,7 +52,7 @@ export default function Footer() {
                 <a href="">Sobre Nostros</a>
                 <a href="">Contacto</a>
                 <a href="">Productos</a>
-                <a href="">Tienda</a>
+                {/* <a href="">Tienda</a> */}
                 <a href="">Servicios</a>
               </div>
             </div>

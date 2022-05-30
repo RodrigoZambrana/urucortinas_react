@@ -37,13 +37,16 @@ export default function NavBar() {
                       Cortinas Roller
                     </a>
                     <a href="single.html" className="dropdown-item">
-                      Persianas
-                    </a>
-                    <a href="team.html" className="dropdown-item">
                       Bandas Verticales
                     </a>
                     <a href="team.html" className="dropdown-item">
                       Venecianas
+                    </a>
+                    <a href="team.html" className="dropdown-item">
+                      Cortinas de enrollar
+                    </a>
+                    <a href="blog.html" className="dropdown-item">
+                      Reparación y mantenimiento
                     </a>
                   </div>
                 </div>
@@ -63,7 +66,7 @@ export default function NavBar() {
                       Toldos de Brazo
                     </a>
                     <a href="team.html" className="dropdown-item">
-                      Toldos Zen
+                      Toldos Corredizos
                     </a>
                     <a href="blog.html" className="dropdown-item">
                       Cerramientos en PVC
@@ -80,27 +83,41 @@ export default function NavBar() {
                   </a>
                   <div className="dropdown-menu">
                     <a href="blog.html" className="dropdown-item">
-                      Blog Grid
+                      Serie 20
                     </a>
                     <a href="single.html" className="dropdown-item">
-                      Detail Page
+                      Serie 25
                     </a>
                     <a href="team.html" className="dropdown-item">
-                      Team Member
+                      Serie Probba
                     </a>
                     <a href="booking.html" className="dropdown-item">
-                      Schedule Booking
+                      Serie Gala
+                    </a>
+                    <a href="booking.html" className="dropdown-item">
+                      Servicio de Instalación
                     </a>
                   </div>
                 </div>
-                <a href="service.html" className="nav-item nav-link">
-                  Servicios
-                </a>
+                <div className="nav-item dropdown">
+                  <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    Servicios
+                  </a>
+                  <div className="dropdown-menu">
+                    <a href="single.html" className="dropdown-item">
+                      Motorizaciones
+                    </a>
+                  </div>
+                </div>
                 <a href="price.html" className="nav-item nav-link">
-                  Tienda
+                  Calculá tu presupuesto
                 </a>
                 <a href="location.html" className="nav-item nav-link">
-                  Contacto
+                  Contactános
                 </a>
               </div>
               <div className="ml-auto"></div>

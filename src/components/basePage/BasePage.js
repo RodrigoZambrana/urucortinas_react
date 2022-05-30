@@ -1,7 +1,7 @@
 import React from "react";
 import LogoBar from "../topBar/LogoBar";
 import NavBar from "../topBar/NavBar";
-import Footer from "../page/Footer";
+import Footer from "../footer/Footer";
 
 export default function BasePage(props) {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { ReactComponent as CartEmpty } from "../../assets/svg/cart-empty.svg";
-import { STORAGE_PRODUCTS_CART, BASE_PATH } from "./Constantes";
+import { STORAGE_PRODUCTS_CART, BASE_PATH } from "../page/Constantes";
 import { ReactComponent as CartFull } from "../../assets/svg/cart-full.svg";
 import { ReactComponent as Garbage } from "../../assets/svg/garbage.svg";
 import { ReactComponent as Close } from "../../assets/svg/close.svg";
