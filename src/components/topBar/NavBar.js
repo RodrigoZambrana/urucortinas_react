@@ -1,13 +1,15 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
 export default function NavBar() {
   return (
     <>
       <div className="nav-bar">
         <div className="container">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-            <a href="#" className="navbar-brand">
+            <Link to="/" exact="true" className="navbar-brand">
               Menu
-            </a>
+            </Link>
             <button
               type="button"
               className="navbar-toggler"
@@ -21,104 +23,100 @@ export default function NavBar() {
               id="navbarCollapse"
             >
               <div className="navbar-nav mr-auto">
-                <a href="index.html" className="nav-item nav-link active">
+                <Link to="/roller" className="nav-item nav-link active">
                   Principal
-                </a>
+                </Link>
                 <div className="nav-item dropdown">
                   <a
-                    href="#"
                     className="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                   >
                     Cortinas
                   </a>
                   <div className="dropdown-menu">
-                    <a href="productos/roller.html" className="dropdown-item">
+                    <NavLink className="dropdown-item" to="/roller">
                       Cortinas Roller
-                    </a>
-                    <a href="single.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Bandas Verticales
-                    </a>
-                    <a href="team.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Venecianas
-                    </a>
-                    <a href="team.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Cortinas de enrollar
-                    </a>
-                    <a href="blog.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Reparación y mantenimiento
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="nav-item dropdown">
                   <a
-                    href="#"
                     className="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                   >
                     Toldos y Cerramientos
                   </a>
                   <div className="dropdown-menu">
-                    <a href="blog.html" className="dropdown-item">
+                    <NavLink className="dropdown-item" to="/roller">
                       Toldos Verticales
-                    </a>
-                    <a href="single.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Toldos de Brazo
-                    </a>
-                    <a href="team.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Toldos Corredizos
-                    </a>
-                    <a href="blog.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Cerramientos en PVC
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="nav-item dropdown">
                   <a
-                    href="#"
                     className="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                   >
                     Aberturas en Aluminio
                   </a>
                   <div className="dropdown-menu">
-                    <a href="blog.html" className="dropdown-item">
+                    <NavLink className="dropdown-item" to="/roller">
                       Serie 20
-                    </a>
-                    <a href="single.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Serie 25
-                    </a>
-                    <a href="team.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Serie Probba
-                    </a>
-                    <a href="booking.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Serie Gala
-                    </a>
-                    <a href="booking.html" className="dropdown-item">
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
                       Servicio de Instalación
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="nav-item dropdown">
                   <a
-                    href="#"
                     className="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                   >
                     Servicios
                   </a>
                   <div className="dropdown-menu">
-                    <a href="single.html" className="dropdown-item">
+                    <NavLink className="dropdown-item" to="/roller">
                       Motorizaciones
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
-                <a href="price.html" className="nav-item nav-link">
+                <NavLink className="nav-item nav-link" to="/roller">
                   Calculá tu presupuesto
-                </a>
-                <a href="location.html" className="nav-item nav-link">
+                </NavLink>
+                <NavLink className="nav-item nav-link" to="/roller">
                   Contactános
-                </a>
+                </NavLink>
               </div>
               <div className="ml-auto"></div>
             </div>

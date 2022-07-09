@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
 export default function LogoBar() {
   return (
     <>
@@ -7,9 +9,9 @@ export default function LogoBar() {
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-8">
               <div className="logo">
-                <a href="index.html">
+                <Link to="/">
                   <img src="img/logo/logo.svg" alt="logo urucortinas" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-8 col-md-7 d-none d-lg-block">
