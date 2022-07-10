@@ -7,9 +7,9 @@ export default function NavBar() {
       <div className="nav-bar">
         <div className="container">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-            <Link to="/" exact="true" className="navbar-brand">
-              Menu
-            </Link>
+            <a href="#" className="navbar-brand">
+              MENU
+            </a>
             <button
               type="button"
               className="navbar-toggler"
@@ -23,9 +23,9 @@ export default function NavBar() {
               id="navbarCollapse"
             >
               <div className="navbar-nav mr-auto">
-                <Link to="/roller" className="nav-item nav-link active">
+                <NavLink to="/" exact className="nav-item nav-link active">
                   Principal
-                </Link>
+                </NavLink>
                 <div className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -34,7 +34,7 @@ export default function NavBar() {
                     Cortinas
                   </a>
                   <div className="dropdown-menu">
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/cortinas/roller">
                       Cortinas Roller
                     </NavLink>
                     <NavLink className="dropdown-item" to="/roller">
@@ -106,7 +106,7 @@ export default function NavBar() {
                     Servicios
                   </a>
                   <div className="dropdown-menu">
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/cortinas/roller">
                       Motorizaciones
                     </NavLink>
                   </div>

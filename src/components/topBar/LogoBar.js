@@ -9,7 +9,7 @@ export default function LogoBar() {
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-8">
               <div className="logo">
-                <Link to="/">
+                <Link to="/" exact="true">
                   <img src="img/logo/logo.svg" alt="logo urucortinas" />
                 </Link>
               </div>
@@ -35,7 +35,7 @@ export default function LogoBar() {
                     </div>
                     <div className="top-bar-text">
                       <h3>Teléfono</h3>
-                      <p>097 365 931</p>
+                      <p href="tel:+598097365931">097 365 931</p>
                     </div>
                   </div>
                 </div>
