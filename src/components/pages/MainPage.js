@@ -5,7 +5,7 @@ import Clients from "../clients/Clients";
 import MercadoPago from "../mercadoPago/MercadoPago";
 import ControlledCarousel from "../carousel/ControlledCarousel";
 
-export default function Main() {
+export default function MainPage() {
   return (
     <>
       <a href="#" className="back-to-top">

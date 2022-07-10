@@ -6,7 +6,10 @@ export default function NavBar() {
     <>
       <div className="nav-bar">
         <div className="container">
-          <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+          <nav
+            className="navbar navbar-expand-lg bg-dark navbar-dark"
+            align="center"
+          >
             <a href="#" className="navbar-brand">
               MENU
             </a>
@@ -45,9 +48,6 @@ export default function NavBar() {
                     </NavLink>
                     <NavLink className="dropdown-item" to="/roller">
                       Cortinas de enrollar
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
-                      Reparación y mantenimiento
                     </NavLink>
                   </div>
                 </div>
@@ -114,9 +114,9 @@ export default function NavBar() {
                     </NavLink>
                   </div>
                 </div>
-                <NavLink className="nav-item nav-link" to="/roller">
+                {/* <NavLink className="nav-item nav-link" to="/roller">
                   Calculá tu presupuesto
-                </NavLink>
+                </NavLink> */}
                 <NavLink className="nav-item nav-link" to="/roller">
                   Contactános
                 </NavLink>

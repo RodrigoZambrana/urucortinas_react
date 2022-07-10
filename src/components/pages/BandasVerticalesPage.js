@@ -1,4 +1,4 @@
-import Roller from "../pages/cortinas/Roller";
+import Roller from "../productsInformation/cortinas/Roller";
 
 export default function RollerPage() {
   return (

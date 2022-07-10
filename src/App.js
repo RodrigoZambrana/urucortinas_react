@@ -1,11 +1,11 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
-import RollerPage from "./components/page/RollerPage";
+import RollerPage from "./components/pages/RollerPage";
 import LogoBar from "./components/topBar/LogoBar";
 import NavBar from "./components/topBar/NavBar";
 import Footer from "./components/footer/Footer";
-import Main from "./components/page/Main";
-import AllProducts from "./components/offeredProducts/AllProducts";
+import MainPage from "./components/pages/MainPage";
+import AllProductsPage from "./components/offeredProducts/AllProductsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -28,13 +28,13 @@ function App() {
           <NavBar />
           <Switch>
             <Route path="/" exact>
-              <Main />
+              <MainPage />
             </Route>
             <Route path="/cortinas/roller">
               <RollerPage />
             </Route>
             <Route path="/productos">
-              <AllProducts />
+              <AllProductsPage />
             </Route>
           </Switch>
         </div>

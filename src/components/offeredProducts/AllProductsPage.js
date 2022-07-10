@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AllProducts() {
+export default function AllProductsPage() {
   return (
     <div className="team">
       <div className="container">
