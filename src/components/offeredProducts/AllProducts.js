@@ -1,7 +1,6 @@
-import Carousel from "react-bootstrap/Carousel";
 import React, { useState } from "react";
 
-export default function OfferedProducts() {
+export default function AllProducts() {
   return (
     <div className="team">
       <div className="container">
@@ -144,7 +143,7 @@ export default function OfferedProducts() {
           </div>
         </div>
         <div className="section-header text-center">
-          <h2>Aberturas en Aluminio y Vidrios</h2>
+          <h2>Servicios</h2>
         </div>
         <div className="row">
           <div className="col-lg-3 col-md-6">
@@ -153,7 +152,7 @@ export default function OfferedProducts() {
                 <img src="img/team-1.jpg" alt="Team Image" />
               </div>
               <div className="team-text">
-                <h2>Ventanas</h2>
+                <h2>Motorizaciones</h2>
                 <p></p>
                 <div className="team-social">
                   <a href="">
@@ -169,7 +168,45 @@ export default function OfferedProducts() {
                 <img src="img/team-2.jpg" alt="Team Image" />
               </div>
               <div className="team-text">
-                <h2>Puertas Exteriores</h2>
+                <h2>Reparación y Service</h2>
+                <p></p>
+                <div className="team-social">
+                  <a href="">
+                    <i className="fas fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-header text-center">
+          <h2>Aberturas en Aluminio y Vidrios</h2>
+        </div>
+        <div className="row">
+          <div className="col-lg-3 col-md-6">
+            <div className="team-item">
+              <div className="team-img">
+                <img src="img/team-1.jpg" alt="Team Image" />
+              </div>
+              <div className="team-text">
+                <h2>Serie 20 y 25</h2>
+                <p></p>
+                <div className="team-social">
+                  <a href="">
+                    <i className="fas fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6">
+            <div className="team-item">
+              <div className="team-img">
+                <img src="img/team-2.jpg" alt="Team Image" />
+              </div>
+              <div className="team-text">
+                <h2>Serie Pobba y Gala</h2>
                 <p></p>
                 <div className="team-social">
                   <a href="">
@@ -185,7 +222,7 @@ export default function OfferedProducts() {
                 <img src="img/team-4.jpg" alt="Team Image" />
               </div>
               <div className="team-text">
-                <h2>Puertas Interiores</h2>
+                <h2>Servicio de instalación</h2>
                 <p></p>
                 <div className="team-social">
                   <a href="">

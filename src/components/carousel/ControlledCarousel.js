@@ -14,6 +14,9 @@ export default function ControlledCarousel() {
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <a className="btn btn-custom" href="rollers.html">
+              Saber más!
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -26,6 +29,9 @@ export default function ControlledCarousel() {
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a className="btn btn-custom" href="rollers.html">
+              Saber más!
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,6 +46,9 @@ export default function ControlledCarousel() {
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
+            <a className="btn btn-custom" href="rollers.html">
+              Saber más!
+            </a>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

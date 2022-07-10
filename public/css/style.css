@@ -2188,7 +2188,7 @@ a:focus {
   height: 50px;
 }
 .btn {
-  width: 100%;
+  /* width: 100%; */
   background-color: transparent;
   color: #0098d3;
   border-color: #0098d3;

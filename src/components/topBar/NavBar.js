@@ -109,6 +109,9 @@ export default function NavBar() {
                     <NavLink className="dropdown-item" to="/cortinas/roller">
                       Motorizaciones
                     </NavLink>
+                    <NavLink className="dropdown-item" to="/roller">
+                      Reparación y mantenimiento
+                    </NavLink>
                   </div>
                 </div>
                 <NavLink className="nav-item nav-link" to="/roller">
