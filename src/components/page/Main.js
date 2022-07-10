@@ -1,9 +1,9 @@
 import React from "react";
-import ControlledCarousel from "../carousel/ControlledCarousel";
 import MainProducts from "../offeredProducts/MainProducts";
 import Facts from "../facts/Facts";
 import Clients from "../clients/Clients";
 import MercadoPago from "../mercadoPago/MercadoPago";
+import ControlledCarousel from "../carousel/ControlledCarousel";
 
 export default function Main() {
   return (

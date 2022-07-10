@@ -37,9 +37,11 @@ export default function MercadoPago() {
                   Fácil y seguro
                 </li>
               </ul>
-              <a className="btn btn-custom" href="">
-                Más Información
-              </a>
+              <div align="center">
+                <a className="btn btn-custom" href="">
+                  Más Información
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -23,9 +23,9 @@ export default function NavBar() {
               id="navbarCollapse"
             >
               <div className="navbar-nav mr-auto">
-                <NavLink to="/" exact className="nav-item nav-link active">
+                {/* <NavLink to="/" exact className="nav-item nav-link">
                   Principal
-                </NavLink>
+                </NavLink> */}
                 <div className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"

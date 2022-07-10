@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import RollerCarousel from "../../carousel/RollerCarousel";
 
 export default function Roller() {
   return (
@@ -10,8 +12,10 @@ export default function Roller() {
               <h2>Cortinas Roller</h2>
             </div>
             <div className="col-12">
-              <a href="../index.html">Principal</a>
-              <a href="roller.html">Roller</a>
+              <Link to="/" exact="true">
+                Principal
+              </Link>
+              <a href="">Roller</a>
             </div>
           </div>
         </div>
@@ -20,142 +24,7 @@ export default function Roller() {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <div className="carousel">
-                <div className="container-fluid">
-                  <div className="owl-carousel">
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-1.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-2.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-3.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-4.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-5.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-6.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-7.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-8.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-9.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-10.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-11.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-12.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-13.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-14.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-15.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-16.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-17.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-18.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-19.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-22.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-23.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-24.jpeg" />
-                      </div>
-                    </div>{" "}
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-25.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-26.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-27.jpeg" />
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="carousel-img">
-                        <img src="../img/productos/roller/roller-detalle-28.jpeg" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <RollerCarousel />
             </div>
             <div className="col-lg-4">
               <div className="section-header text-left">
