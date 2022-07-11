@@ -1,0 +1,154 @@
+import React from "react";
+import InfiniteCarousel from "react-leaf-carousel";
+
+export default function ClientsCarousel() {
+  return (
+    <InfiniteCarousel
+      breakpoints={[
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          },
+        },
+      ]}
+      dots={true}
+      showSides={true}
+      sidesOpacity={0.5}
+      sideSize={0.1}
+      slidesToScroll={4}
+      slidesToShow={4}
+      scrollOnDevice={true}
+      autoCycle={true}
+    >
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+      <div>
+        <img
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg"
+        />
+      </div>
+    </InfiniteCarousel>
+  );
+}

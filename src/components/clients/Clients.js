@@ -1,4 +1,6 @@
 import React from "react";
+import ClientsCarousel from "../carousel/ClientsCarousel";
+
 export default function Clients() {
   return (
     <div className="testimonial">
@@ -12,20 +14,7 @@ export default function Clients() {
             consultar por servicios especiales de mantenimiento permanente.
           </h2>
         </div>
-        <div className="owl-carousel testimonials-carousel">
-          <div className="testimonial-item">
-            <img src="img/testimonial-1.jpg" alt="Image" />
-          </div>
-          <div className="testimonial-item">
-            <img src="img/testimonial-2.jpg" alt="Image" />
-          </div>
-          <div className="testimonial-item">
-            <img src="img/testimonial-3.jpg" alt="Image" />
-          </div>
-          <div className="testimonial-item">
-            <img src="img/testimonial-4.jpg" alt="Image" />
-          </div>
-        </div>
+        <ClientsCarousel />
       </div>
     </div>
   );
