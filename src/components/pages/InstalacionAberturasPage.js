@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import InstalacionAberturas from "../productsInformation/aberturas/InstalacionAberturas";
 
-export default function RollerPage() {
+export default function InstalacionAberturasPage() {
   return (
     <>
-      <Roller />
+      <InstalacionAberturas />
     </>
   );
 }

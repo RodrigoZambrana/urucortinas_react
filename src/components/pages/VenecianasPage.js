@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import Venecianas from "../productsInformation/cortinas/Venecianas";
 
-export default function RollerPage() {
+export default function VenecianaPage() {
   return (
     <>
-      <Roller />
+      <Venecianas />
     </>
   );
 }

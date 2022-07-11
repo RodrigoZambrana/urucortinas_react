@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import ToldoVertical from "../productsInformation/toldos/ToldoVertical";
 
-export default function RollerPage() {
+export default function ToldosVerticalesPage() {
   return (
     <>
-      <Roller />
+      <ToldoVertical />
     </>
   );
 }

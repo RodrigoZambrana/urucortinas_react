@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import Bandas from "../productsInformation/cortinas/Bandas";
 
-export default function RollerPage() {
+export default function BandasVerticalesPage() {
   return (
     <>
-      <Roller />
+      <Bandas />
     </>
   );
 }

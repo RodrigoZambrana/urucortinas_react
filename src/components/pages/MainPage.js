@@ -1,6 +1,6 @@
 import React from "react";
 import MainProducts from "../offeredProducts/MainProducts";
-import Facts from "../facts/Facts";
+import SocialMedia from "../socialMedia/SocialMedia";
 import Clients from "../clients/Clients";
 import MercadoPago from "../mercadoPago/MercadoPago";
 import ControlledCarousel from "../carousel/ControlledCarousel";
@@ -14,7 +14,7 @@ export default function MainPage() {
       <ControlledCarousel />
       <MercadoPago />
       <MainProducts />
-      <Facts />
+      <SocialMedia />
       <Clients />
     </>
   );

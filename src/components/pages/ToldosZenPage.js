@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import ToldoZen from "../productsInformation/toldos/ToldoZen";
 
-export default function RollerPage() {
+export default function ToldosZenPage() {
   return (
     <>
-      <Roller />
+      <ToldoZen />
     </>
   );
 }

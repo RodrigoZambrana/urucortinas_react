@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import Cerramiento from "../productsInformation/toldos/Cerramiento";
 
-export default function RollerPage() {
+export default function CerramientosPage() {
   return (
     <>
-      <Roller />
+      <Cerramiento />
     </>
   );
 }

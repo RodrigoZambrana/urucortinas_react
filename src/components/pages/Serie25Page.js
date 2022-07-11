@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import Serie25 from "../productsInformation/aberturas/Serie25";
 
-export default function RollerPage() {
+export default function Serie25Page() {
   return (
     <>
-      <Roller />
+      <Serie25 />
     </>
   );
 }

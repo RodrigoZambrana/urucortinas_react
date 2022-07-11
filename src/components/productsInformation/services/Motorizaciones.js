@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RollerCarousel from "../../carousel/RollerCarousel";
 
-export default function Serie20() {
+export default function Motorizaciones() {
   return (
     <div>
       <div className="page-header">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2>Aberturas Serie 20</h2>
+              <h2>Motorizaciones</h2>
             </div>
             {/* <div className="col-12">
               <Link to="/" exact="true">
@@ -29,7 +29,7 @@ export default function Serie20() {
             <div className="col-lg-4">
               <div className="section-header text-left">
                 {/* <p>Decorativas y funcionales.</p> */}
-                <h2>Aberturas Serie 20</h2>
+                <h2>Motorizaciones</h2>
               </div>
               <div className="about-content">
                 <p>

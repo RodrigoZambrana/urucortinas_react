@@ -40,13 +40,19 @@ export default function NavBar() {
                     <NavLink className="dropdown-item" to="/cortinas/roller">
                       Cortinas Roller
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/cortinas/bandas-verticales"
+                    >
                       Bandas Verticales
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/cortinas/venecianas"
+                    >
                       Venecianas
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/cortinas/catalanas">
                       Cortinas de enrollar
                     </NavLink>
                   </div>
@@ -59,16 +65,19 @@ export default function NavBar() {
                     Toldos y Cerramientos
                   </a>
                   <div className="dropdown-menu">
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/toldos/verticales">
                       Toldos Verticales
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/toldos/brazo">
                       Toldos de Brazo
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/toldos/corredizo">
                       Toldos Corredizos
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/toldos/cerramientos"
+                    >
                       Cerramientos en PVC
                     </NavLink>
                   </div>
@@ -81,19 +90,22 @@ export default function NavBar() {
                     Aberturas en Aluminio
                   </a>
                   <div className="dropdown-menu">
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/aberturas/serie-20">
                       Serie 20
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/aberturas/serie-25">
                       Serie 25
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/aberturas/probba">
                       Serie Probba
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink className="dropdown-item" to="/aberturas/gala">
                       Serie Gala
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/aberturas/instalacion"
+                    >
                       Servicio de Instalación
                     </NavLink>
                   </div>
@@ -106,10 +118,16 @@ export default function NavBar() {
                     Servicios
                   </a>
                   <div className="dropdown-menu">
-                    <NavLink className="dropdown-item" to="/cortinas/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/servicios/motorizaciones"
+                    >
                       Motorizaciones
                     </NavLink>
-                    <NavLink className="dropdown-item" to="/roller">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/servicios/mantenimiento"
+                    >
                       Reparación y mantenimiento
                     </NavLink>
                   </div>

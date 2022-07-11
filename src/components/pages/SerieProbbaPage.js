@@ -1,9 +1,9 @@
-import Roller from "../productsInformation/cortinas/Roller";
+import Probba from "../productsInformation/aberturas/Probba";
 
-export default function RollerPage() {
+export default function SerieProbbaPage() {
   return (
     <>
-      <Roller />
+      <Probba />
     </>
   );
 }
