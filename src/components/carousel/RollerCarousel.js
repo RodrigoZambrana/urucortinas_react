@@ -67,7 +67,7 @@ export default function RollerCarousel() {
       >
         <Carousel
           data={data}
-          time={2000}
+          time={1000}
           width="850px"
           height="500px"
           captionStyle={captionStyle}
