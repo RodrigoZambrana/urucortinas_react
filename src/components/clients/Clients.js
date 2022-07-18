@@ -4,7 +4,7 @@ import ClientsCarousel from "../carousel/ClientsCarousel";
 export default function Clients() {
   return (
     <div className="testimonial">
-      <div className="container">
+      <div className="container-fluid">
         <div className="section-header text-center">
           <p>Nuestros clientes</p>
           <h2>

@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 export default function ControlledCarousel() {
   return (
@@ -9,14 +10,16 @@ export default function ControlledCarousel() {
           <img
             className="d-block w-100"
             src="img/carousel/roller.png"
-            alt="First slide"
+            alt="roller image"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <a className="btn btn-custom" href="rollers.html">
+            <h1 className="carousel-h1">Cortinas roller</h1>
+            <p className="carousel-caption">
+              La mejor opción para el hogar u oficina.
+            </p>
+            <Link className="btn btn-custom" to="/cortinas/roller">
               Saber más!
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,13 +28,15 @@ export default function ControlledCarousel() {
             src="img/carousel/catalana.png"
             alt="Second slide"
           />
-
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a className="btn btn-custom" href="rollers.html">
+            <h1 className="carousel-h1">Cortinas de enrollar</h1>
+            <p className="carousel-caption">
+              Sin albañileria. En PVC y aluminio. Excelente aisalnte térmico y
+              de sonido
+            </p>
+            <Link className="btn btn-custom" to="/cortinas/catalanas">
               Saber más!
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -42,13 +47,13 @@ export default function ControlledCarousel() {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <h1 className="carousel-h1">Bandas Verticales</h1>
+            <p className="carousel-caption">
+              Ideales para cubrir grandes superfices vidriadas
             </p>
-            <a className="btn btn-custom" href="rollers.html">
+            <Link className="btn btn-custom" to="/cortinas/bandas-verticales">
               Saber más!
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

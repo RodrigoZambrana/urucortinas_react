@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function OfferedProducts() {
   return (
     <div className="team">
-      <div className="container">
+      <div className="container-fluid">
         <div className="section-header text-center">
           <p>Conozca nuestros productos y servicios</p>
         </div>
@@ -62,10 +62,10 @@ export default function OfferedProducts() {
           <div className="col-lg-4 col-md-6">
             <div className="team-item">
               <div className="team-img">
-                <img src="img/team-1.jpg" alt="Team Image" />
+                <img src="img/team-3.jpg" alt="Team Image" />
               </div>
               <div className="team-text">
-                <h2>Ventanas</h2>
+                <h2>Motorizaciones</h2>
                 <p></p>
                 <div className="team-social">
                   <a href="">
@@ -78,10 +78,10 @@ export default function OfferedProducts() {
           <div className="col-lg-4 col-md-6">
             <div className="team-item">
               <div className="team-img">
-                <img src="img/team-3.jpg" alt="Team Image" />
+                <img src="img/team-1.jpg" alt="Team Image" />
               </div>
               <div className="team-text">
-                <h2>Motorizaciones</h2>
+                <h2>Ventanas</h2>
                 <p></p>
                 <div className="team-social">
                   <a href="">

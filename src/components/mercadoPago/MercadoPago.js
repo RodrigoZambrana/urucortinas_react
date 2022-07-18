@@ -4,7 +4,7 @@ import React, { useState } from "react";
 export default function MercadoPago() {
   return (
     <div className="about">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-lg-6">
             <div className="about-img">

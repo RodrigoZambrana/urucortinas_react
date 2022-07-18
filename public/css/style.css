@@ -2225,3 +2225,15 @@ a:focus {
 .dot:hover {
   background-color: #202c45;
 }
+
+.carousel-h1 {
+  color: #ffffff;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 120px;
+}
+.carousel-caption {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 100px;
+}
